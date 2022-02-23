@@ -2,9 +2,11 @@
 
 Potrebno je kreirati NuGet paket te isti instalirati u zeljeni servis. Zatim je potrebno registrovati middleware u pipeline-u.
 Primer registrovanja middleware-a:
+
+```csharp
  var rateLimiterConfiguration = Configuration.GetSection("RateLimiter").Get<RateLimiterConfiguration>();
  app.UseRateLimiter(rateLimiterConfiguration);
-
+ ```
 
 ## Primer konfiguracije iz TestApi servisa
 
